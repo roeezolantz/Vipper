@@ -1,0 +1,19 @@
+{
+    "name": "Vipper",
+    "version": "1.0",
+    "description": "Used to adjust the playing speed of videos inside almost every web page",
+    "permissions": [
+        "tabs","<all_urls>"
+    ],
+    "content_scripts": [
+        {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+            ],
+        "js": ["index.js"],
+        "run_at": "document_end"         // pay attention to this line
+        }
+    ],
+    "manifest_version": 2
+}
